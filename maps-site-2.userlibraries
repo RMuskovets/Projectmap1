@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Maven: org.springframework:spring-aop:5.1.2.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/spring-aop/5.1.2.RELEASE/spring-aop-5.1.2.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.jboss.logging:jboss-logging:3.3.2.Final">
+    <archive path="C:/Users/Roman/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar" />
+  </library>
+  <library name="Maven: net.bytebuddy:byte-buddy:1.9.3">
+    <archive path="C:/Users/Roman/.m2/repository/net/bytebuddy/byte-buddy/1.9.3/byte-buddy-1.9.3.jar" />
+  </library>
+  <library name="Maven: com.fasterxml:classmate:1.4.0">
+    <archive path="C:/Users/Roman/.m2/repository/com/fasterxml/classmate/1.4.0/classmate-1.4.0.jar" />
+  </library>
+  <library name="Maven: org.springframework.data:spring-data-commons:2.1.2.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/data/spring-data-commons/2.1.2.RELEASE/spring-data-commons-2.1.2.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-context:5.1.2.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/spring-context/5.1.2.RELEASE/spring-context-5.1.2.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-tx:5.1.2.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/spring-tx/5.1.2.RELEASE/spring-tx-5.1.2.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-beans:5.1.2.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/spring-beans/5.1.2.RELEASE/spring-beans-5.1.2.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.slf4j:slf4j-api:1.7.25">
+    <archive path="C:/Users/Roman/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-data-rest:2.1.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/boot/spring-boot-starter-data-rest/2.1.0.RELEASE/spring-boot-starter-data-rest-2.1.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-json:2.1.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.1.0.RELEASE/spring-boot-starter-json-2.1.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.7">
+    <archive path="C:/Users/Roman/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.jar" />
+  </library>
+  <library name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.7">
+    <archive path="C:/Users/Roman/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.7/jackson-core-2.9.7.jar" />
+  </library>
+  <library name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.7">
+    <archive path="C:/Users/Roman/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.7/jackson-datatype-jdk8-2.9.7.jar" />
+  </library>
+  <library name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.7">
+    <archive path="C:/Users/Roman/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.7/jackson-datatype-jsr310-2.9.7.jar" />
+  </library>
+  <library name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.7">
+    <archive path="C:/Users/Roman/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.7/jackson-module-parameter-names-2.9.7.jar" />
+  </library>
+  <library name="Maven: org.springframework.data:spring-data-rest-webmvc:3.1.2.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/data/spring-data-rest-webmvc/3.1.2.RELEASE/spring-data-rest-webmvc-3.1.2.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.data:spring-data-rest-core:3.1.2.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/data/spring-data-rest-core/3.1.2.RELEASE/spring-data-rest-core-3.1.2.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.hateoas:spring-hateoas:0.25.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/hateoas/spring-hateoas/0.25.0.RELEASE/spring-hateoas-0.25.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.plugin:spring-plugin-core:1.2.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.atteo:evo-inflector:1.2.2">
+    <archive path="C:/Users/Roman/.m2/repository/org/atteo/evo-inflector/1.2.2/evo-inflector-1.2.2.jar" />
+  </library>
+  <library name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0">
+    <archive path="C:/Users/Roman/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-freemarker:2.1.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/boot/spring-boot-starter-freemarker/2.1.0.RELEASE/spring-boot-starter-freemarker-2.1.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter:2.1.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/boot/spring-boot-starter/2.1.0.RELEASE/spring-boot-starter-2.1.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-logging:2.1.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.1.0.RELEASE/spring-boot-starter-logging-2.1.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: ch.qos.logback:logback-classic:1.2.3">
+    <archive path="C:/Users/Roman/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar" />
+  </library>
+  <library name="Maven: ch.qos.logback:logback-core:1.2.3">
+    <archive path="C:/Users/Roman/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar" />
+  </library>
+  <library name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.11.1">
+    <archive path="C:/Users/Roman/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.11.1/log4j-to-slf4j-2.11.1.jar" />
+  </library>
+  <library name="Maven: org.apache.logging.log4j:log4j-api:2.11.1">
+    <archive path="C:/Users/Roman/.m2/repository/org/apache/logging/log4j/log4j-api/2.11.1/log4j-api-2.11.1.jar" />
+  </library>
+  <library name="Maven: org.slf4j:jul-to-slf4j:1.7.25">
+    <archive path="C:/Users/Roman/.m2/repository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar" />
+  </library>
+  <library name="Maven: javax.annotation:javax.annotation-api:1.3.2">
+    <archive path="C:/Users/Roman/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar" />
+  </library>
+  <library name="Maven: org.yaml:snakeyaml:1.23">
+    <archive path="C:/Users/Roman/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar" />
+  </library>
+  <library name="Maven: org.freemarker:freemarker:2.3.28">
+    <archive path="C:/Users/Roman/.m2/repository/org/freemarker/freemarker/2.3.28/freemarker-2.3.28.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-context-support:5.1.2.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/spring-context-support/5.1.2.RELEASE/spring-context-support-5.1.2.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-thymeleaf:2.1.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/boot/spring-boot-starter-thymeleaf/2.1.0.RELEASE/spring-boot-starter-thymeleaf-2.1.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.thymeleaf:thymeleaf-spring5:3.0.11.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/thymeleaf/thymeleaf-spring5/3.0.11.RELEASE/thymeleaf-spring5-3.0.11.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.thymeleaf:thymeleaf:3.0.11.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/thymeleaf/thymeleaf/3.0.11.RELEASE/thymeleaf-3.0.11.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.attoparser:attoparser:2.0.5.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/attoparser/attoparser/2.0.5.RELEASE/attoparser-2.0.5.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.unbescape:unbescape:1.1.6.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.1.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/thymeleaf/extras/thymeleaf-extras-java8time/3.0.1.RELEASE/thymeleaf-extras-java8time-3.0.1.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-web:2.1.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.1.0.RELEASE/spring-boot-starter-web-2.1.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-tomcat:2.1.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.1.0.RELEASE/spring-boot-starter-tomcat-2.1.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.apache.tomcat.embed:tomcat-embed-core:9.0.12">
+    <archive path="C:/Users/Roman/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.12/tomcat-embed-core-9.0.12.jar" />
+  </library>
+  <library name="Maven: org.apache.tomcat.embed:tomcat-embed-el:9.0.12">
+    <archive path="C:/Users/Roman/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.12/tomcat-embed-el-9.0.12.jar" />
+  </library>
+  <library name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.12">
+    <archive path="C:/Users/Roman/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.12/tomcat-embed-websocket-9.0.12.jar" />
+  </library>
+  <library name="Maven: org.hibernate.validator:hibernate-validator:6.0.13.Final">
+    <archive path="C:/Users/Roman/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.13.Final/hibernate-validator-6.0.13.Final.jar" />
+  </library>
+  <library name="Maven: javax.validation:validation-api:2.0.1.Final">
+    <archive path="C:/Users/Roman/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-web:5.1.2.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-webmvc:5.1.2.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/spring-webmvc/5.1.2.RELEASE/spring-webmvc-5.1.2.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-expression:5.1.2.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/spring-expression/5.1.2.RELEASE/spring-expression-5.1.2.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-devtools:2.1.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/boot/spring-boot-devtools/2.1.0.RELEASE/spring-boot-devtools-2.1.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot:2.1.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/boot/spring-boot/2.1.0.RELEASE/spring-boot-2.1.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.1.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.1.0.RELEASE/spring-boot-autoconfigure-2.1.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.projectlombok:lombok:1.18.2">
+    <archive path="C:/Users/Roman/.m2/repository/org/projectlombok/lombok/1.18.2/lombok-1.18.2.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-test:2.1.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.1.0.RELEASE/spring-boot-starter-test-2.1.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-test:2.1.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/boot/spring-boot-test/2.1.0.RELEASE/spring-boot-test-2.1.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:2.1.0.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.1.0.RELEASE/spring-boot-test-autoconfigure-2.1.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: com.jayway.jsonpath:json-path:2.4.0">
+    <archive path="C:/Users/Roman/.m2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar" />
+  </library>
+  <library name="Maven: net.minidev:json-smart:2.3">
+    <archive path="C:/Users/Roman/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar" />
+  </library>
+  <library name="Maven: net.minidev:accessors-smart:1.2">
+    <archive path="C:/Users/Roman/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar" />
+  </library>
+  <library name="Maven: org.ow2.asm:asm:5.0.4">
+    <archive path="C:/Users/Roman/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar" />
+  </library>
+  <library name="Maven: junit:junit:4.12">
+    <archive path="C:/Users/Roman/.m2/repository/junit/junit/4.12/junit-4.12.jar" />
+  </library>
+  <library name="Maven: org.assertj:assertj-core:3.11.1">
+    <archive path="C:/Users/Roman/.m2/repository/org/assertj/assertj-core/3.11.1/assertj-core-3.11.1.jar" />
+  </library>
+  <library name="Maven: org.mockito:mockito-core:2.23.0">
+    <archive path="C:/Users/Roman/.m2/repository/org/mockito/mockito-core/2.23.0/mockito-core-2.23.0.jar" />
+  </library>
+  <library name="Maven: net.bytebuddy:byte-buddy-agent:1.9.3">
+    <archive path="C:/Users/Roman/.m2/repository/net/bytebuddy/byte-buddy-agent/1.9.3/byte-buddy-agent-1.9.3.jar" />
+  </library>
+  <library name="Maven: org.objenesis:objenesis:2.6">
+    <archive path="C:/Users/Roman/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar" />
+  </library>
+  <library name="Maven: org.hamcrest:hamcrest-core:1.3">
+    <archive path="C:/Users/Roman/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" />
+  </library>
+  <library name="Maven: org.hamcrest:hamcrest-library:1.3">
+    <archive path="C:/Users/Roman/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar" />
+  </library>
+  <library name="Maven: org.skyscreamer:jsonassert:1.5.0">
+    <archive path="C:/Users/Roman/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar" />
+  </library>
+  <library name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1">
+    <archive path="C:/Users/Roman/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-core:5.1.2.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/spring-core/5.1.2.RELEASE/spring-core-5.1.2.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-jcl:5.1.2.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/spring-jcl/5.1.2.RELEASE/spring-jcl-5.1.2.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-test:5.1.2.RELEASE">
+    <archive path="C:/Users/Roman/.m2/repository/org/springframework/spring-test/5.1.2.RELEASE/spring-test-5.1.2.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.xmlunit:xmlunit-core:2.6.2">
+    <archive path="C:/Users/Roman/.m2/repository/org/xmlunit/xmlunit-core/2.6.2/xmlunit-core-2.6.2.jar" />
+  </library>
+  <library name="H2">
+    <archive path="G:/Java/StockOverflow/lib/h2-1.4.197.jar" />
+  </library>
+  <library name="IDEA Platform SDK">
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/servlet.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/jasper2/org.eclipse.jdt.core.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-jmf.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-commons-logging.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-commons-net.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/cli-parser-1.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-jdepend.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-launcher.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/asm-5.0.3.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/baksmali-2.2.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/bcprov-jdk15on-1.55.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/bootstrap.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-javamail.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/debugger-agent-storage.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-apache-bcel.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/jasper2.1/jasper-jdt.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/jasper2.1/jasper.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-apache-resolver.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/jasper2.1/servlet-api.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/commons-httpclient-3.1-patched.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/cglib-nodep-3.2.4.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/aether-1.1.0-all.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/constraint-layout.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-testutil.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-apache-bsf.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/commons-compress-1.10.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/jasper2/commons-logging-api.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-junit4.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/commons-codec-1.9.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-apache-regexp.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-apache-log4j.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/aether-dependency-resolver.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/commons-net-3.3.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-swing.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-jai.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/jasper2.1/jsp-api.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/common-lang-3.2.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/debugger-agent.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/jasper2/jsp-api.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-jsch.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/asm-all.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/jasper2.1/el-api.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/jasper2/commons-el.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/jasper2.1/tomcat-juli.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/jasper2/jasper-runtime.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/automaton.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/commons-imaging-1.0-RC.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/asm-analysis-5.0.3.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/common-io-3.2.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/xerces1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-apache-xalan2.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/batik-all.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/commons-logging-1.2.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-netrexx.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/commons-io-2.2.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/xml-apis.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-junit.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/annotations.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/jasper2.1/jasper-el.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-antlr.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/cloud-config-client.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/jasper2/jasper-compiler.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rt/jasper2/servlet-api.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/asm-tree-5.0.3.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/common-image-3.2.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ant/lib/ant-apache-oro.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/coverage-agent.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/coverage-instrumenter.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/coverage-util.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/dexlib2-2.2.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ecj-4.7.2.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/eddsa-0.2.0.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/extensions.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/external-system-rt.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/fest-assert-1.5.0-SNAPSHOT.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/fest-reflect-2.0-SNAPSHOT.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/fest-swing-1.4.4.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/fest-util-1.3.0-SNAPSHOT.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/fluent-hc-4.5.2.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/forms_rt.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/fst-2.56.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/groovy-all-2.4.12.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/gson-2.8.2.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/guava-21.0.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/hamcrest-core-1.3.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/httpclient-4.5.2.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/httpmime-4.5.2.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/httpcore-4.4.5.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/idea-jsp-openapi.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/idea.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/idea_rt.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ideax.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/imageio-core-3.2.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/imageio-tiff-3.2.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/imageio-metadata-3.2.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/imgscalr-lib-4.2.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/ini4j-0.5.5-2.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/isorelax.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jackson-core-2.8.8.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jasper2_rt.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jasper21_rt.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/java-api.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/java-impl.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/javac2.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/javassist-3.21.0-GA.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jaxen-1.1.3.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jayatana-1.2.4.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jbcrypt-1.0.0.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jcip-annotations-1.0.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jdom.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jettison-1.3.2.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jediterm-pty-2.7.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jgoodies-common-1.4.0.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jgoodies-forms.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jh.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jimfs-1.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jing.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jna-platform.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jna.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jps-builders-6.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jps-builders.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jps-launcher.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jps-model.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jsch-0.1.54.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jsch.agentproxy.connector-factory.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jsch.agentproxy.core.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jsch.agentproxy.jsch.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jsch.agentproxy.pageant.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jsch.agentproxy.sshagent.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jsch.agentproxy.usocket-jna.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jsch.agentproxy.usocket-nc.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jshell-frontend.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jshell-protocol.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jsp-api.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jsr305.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jsr173_1.0_api.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/junit-4.12.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/junit.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/jzlib-1.1.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/kotlin-runtime.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/kotlin-reflect.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/kotlinx-coroutines-core-0.20.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/kotlinx-coroutines-jdk8-0.20.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/log4j.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/lz4-java-1.3.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/markdown4j-2.2.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/markdownj-core-0.4.2-SNAPSHOT.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/maven-aether-provider-3.3.9-all.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/microba.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/miglayout-core-5.0.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/miglayout-swing-5.0.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/MultithreadedTC-1.01.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/nanoxml-2.2.3.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/nekohtml-1.9.14.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/netty-all-4.1.13.Final.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/objenesis-2.5.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/openapi.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/optimizedFileManager.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/oro-2.0.8.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/picocontainer.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/platform-api.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/platform-impl.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/protobuf-java-3.0.0.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/proxy-vole-1.0.3.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/pty4j-0.7.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/purejavacomm.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/resolver.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rhino-js-1_7R4.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/rngom-20051226-patched.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/serviceMessages.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/servlet-api.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/slf4j-api-1.7.10.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/slf4j-log4j12-1.7.10.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/snakeyaml-1.17.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/snappy-in-java-0.5.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/sqlite-jdbc-3.20.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/streamex-0.6.5.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/swingx-core-1.6.2-2.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/test-discovery-agent.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/test-discovery-instrumenter.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/trilead-ssh2-build-217-jenkins-11.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/trang-core.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/trove4j.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/util-2.2.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/util.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/wadl-core.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/velocity.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/winp-1.25.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/xbean.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/xercesImpl.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/xmlgraphics-commons-1.5.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/xml-apis-ext-1.3.04.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/xpp3-1.1.4-min.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/xmlrpc-2.0.1.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/xstream-1.4.8.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/xz-1.5.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/lib/yjp-controller-api-redist.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/redist/annotations-java8.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/redist/annotations.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/redist/forms_rt.jar" />
+    <archive path="C:/Program Files/JetBrains/IntelliJ IDEA 2018.1.1/redist/javac2.jar" />
+  </library>
+  <library name="Neurals">
+    <archive path="G:/Neurals/bin/jar/Neurals.jar" />
+  </library>
+  <library name="Python 3.6 interpreter library" />
+  <library name="showdown">
+    <archive path="C:/Users/Roman/.IntelliJIdea2018.1/config/javascript/extLibs/http_cdn.rawgit.com_showdownjs_showdown_1.0.1_dist_showdown.js" />
+  </library>
+</eclipse-userlibraries>
+
