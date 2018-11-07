@@ -3,6 +3,7 @@ USE db_proekt_1;
 
 CREATE TABLE if not exists type (
   id INT(11) not null auto_increment primary key,
+  parent_id int(11) not null,
   nazva text not null
 ) engine=InnoDB default charset=utf8;
 
@@ -36,11 +37,17 @@ create table if not exists rating (
   rating float not null
 ) engine=InnoDB default charset=utf8;
 
+create table if not exists marshrut_mark_bind (
+  id int(11) not null auto_increment primary key,
+  marshrut_id int(11) not null references marshrut (id) on delete cascade,
+  mark_id int(11) not null references mitka (id) on delete cascade
+);
+
 create table if not exists marshrut (
   id int(11) not null auto_increment primary key,
   start_point_id int(11) not null,
   end_point_id int(11) not null,
-  v_promizhku_ids longtext not null,
+  --v_promizhku_ids longtext not null,
   podiya_id int(11) not null default -1
 ) engine=InnoDB default charset=utf8;
 
@@ -53,8 +60,8 @@ create table if not exists pravki (
 
 create table podiya_user_bind (
   id int(11) not null auto_increment primary key,
-  user_id int not null,
-  podiya_id int not null
+  user_id int not null references user (id) on delete cascade,
+  podiya_id int not null references podiya (id) on delete cascade
 ) engine=InnoDB default charaset=utf8;
 
 create table podiya (
