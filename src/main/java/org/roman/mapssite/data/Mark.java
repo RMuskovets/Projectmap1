@@ -2,15 +2,25 @@ package org.roman.mapssite.data;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
-@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY) @Entity
 public class Mark implements DataClass {
 
     private static Integer CURRENT_ID = 0;
 
+    @Column(name="ID", nullable=false)
     private final Integer id = CURRENT_ID++;
+    @Column(name="typeID", nullable=false)
     private Integer type_id = -1;
-    private double coord_x, coord_y;
+    @Column(name="coordX", nullable=false)
+    private double coord_x;
+    @Column(name="coordY", nullable=false)
+    private double coord_y;
+    @Column
     private String name;
+    @Column(name="ownerID")
     private Integer owner_id = -1;
 
     public Mark(Integer type_id, double coord_x, double coord_y, String name, Integer owner_id) {
@@ -33,6 +43,8 @@ public class Mark implements DataClass {
         this.coord_y = coord_y;
         this.name = name;
     }
+
+    public Mark() {}
 
     public double getCoord_x() {
         return coord_x;
