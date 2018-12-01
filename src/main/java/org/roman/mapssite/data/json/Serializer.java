@@ -1,7 +1,6 @@
 package org.roman.mapssite.data.json;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.roman.mapssite.data.*;
 
 import java.io.IOException;
 import java.io.StringWriter;

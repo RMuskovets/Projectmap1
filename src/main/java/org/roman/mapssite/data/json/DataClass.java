@@ -1,4 +1,4 @@
-package org.roman.mapssite.data;
+package org.roman.mapssite.data.json;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
