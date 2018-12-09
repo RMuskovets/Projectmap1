@@ -47,7 +47,7 @@ create table if not exists marshrut (
   id int(11) not null auto_increment primary key,
   start_point_id int(11) not null,
   end_point_id int(11) not null,
-  --v_promizhku_ids longtext not null,
+  -- v_promizhku_ids longtext not null,
   podiya_id int(11) not null default -1
 ) engine=InnoDB default charset=utf8;
 
@@ -62,13 +62,13 @@ create table podiya_user_bind (
   id int(11) not null auto_increment primary key,
   user_id int not null references user (id) on delete cascade,
   podiya_id int not null references podiya (id) on delete cascade
-) engine=InnoDB default charaset=utf8;
+) engine=InnoDB default charset=utf8;
 
 create table podiya (
   id int(11) not null auto_increment primary key,
   nazva text not null,
   chas_pochatok datetime not null,
-  chas_kinec datetime not null,
+  chas_kinec datetime not null
 ) engine=InnoDB default charset=utf8;
 
 -- ÂÀÆËÈÂÎ: Ïîëÿ podiya.zaprosheni, marshrut.v_promizhku_ids, mitka.komentari_ids - öå 
