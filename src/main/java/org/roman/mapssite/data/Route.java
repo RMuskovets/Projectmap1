@@ -43,5 +43,32 @@ public class Route implements DataClass {
     public static class Builder {
 
         private List<Mark> marks = new ArrayList<>();
+
+        public Builder() { }
+        public Builder(List<Mark> m) {marks = m;}
+
+        public Builder addMark(Mark m) {
+            marks.add(m);
+            return this;
+        }
+
+        public Builder removeMark(Mark m) {
+            marks.remove(m);
+            return this;
+        }
+
+        public Builder removeMark(int i) {
+            marks.remove(i);
+            return this;
+        }
+
+        public Builder setMarks(List<Mark> m) {
+            marks = m;
+            return this;
+        }
+
+        public Route build() {
+            return new Route(marks);
+        }
     }
 }

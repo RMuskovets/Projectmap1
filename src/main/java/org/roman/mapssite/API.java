@@ -1,11 +1,12 @@
 package org.roman.mapssite;
 
+import org.roman.mapssite.data.*;
 import org.roman.mapssite.server.Server;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+import java.util.*;
+
+@RestController
 public class API {
 
     ////////////////// GET ALL ////////////////////
@@ -13,23 +14,18 @@ public class API {
     private static Server server = Server.instance();
 
     @RequestMapping(path = "/api/user/all")
-    public String users() {
-        return "";
+    public List<User> users() {
+        return new ArrayList<>();
     }
 
     @RequestMapping(path = "/api/event/all")
-    public String events() {
-        return "";
-    }
-
-    @RequestMapping(path = "/api/lang/all")
-    public String languages() {
-        return "";
+    public List<Event> events() {
+        return new ArrayList<>();
     }
 
     @RequestMapping(path = "/api/mark/all")
-    public String marks() {
-        return "";
+    public List<Mark> marks() {
+        return new ArrayList<>();
     }
 
     ////////////////// GET BY ... /////////////////////
@@ -38,4 +34,19 @@ public class API {
     public String userById(@RequestParam(name = "id") String id) {
         return "";
     }
+
+
+    private enum AJAX {
+        ;
+
+        public static final int INCORRECT_DATA_ERROR = 100;
+
+        public static Map<String, Object> incorrectData(String kind) {
+            Map<String, Object> mso = new HashMap<>();
+            mso.put("response", INCORRECT_DATA_ERROR);
+            mso.put("kind", kind);
+            return mso;
+        }
+    }
+
 }
