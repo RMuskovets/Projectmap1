@@ -3,23 +3,25 @@ package org.roman.mapssite.data;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import org.roman.mapssite.data.json.DataClass;
 
-//import javax.persistence.Column;
-//import javax.persistence.Entity;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY) //@Entity
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY) @Entity
 public class Mark implements DataClass {
 
-    //@Column(name="ID", nullable=false)
+    @Column(name="ID", nullable=false) @GeneratedValue @Id
     private Integer id;
-    //@Column(name="typeID", nullable=false)
+    @Column(name="typeID", nullable=false)
     private Integer type_id = -1;
-    //@Column(name="coordX", nullable=false)
+    @Column(name="coordX", nullable=false)
     private double coord_x;
-    //@Column(name="coordY", nullable=false)
+    @Column(name="coordY", nullable=false)
     private double coord_y;
-    //@Column
+    @Column
     private String name;
-    //@Column(name="ownerID")
+    @Column(name="ownerID")
     private Integer owner_id = -1;
 
     private Mark(Integer type_id, double coord_x, double coord_y, String name,

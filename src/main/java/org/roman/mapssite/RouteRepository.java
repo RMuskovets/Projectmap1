@@ -1,4 +1,7 @@
 package org.roman.mapssite;
 
-public class RouteRepository {
+import org.roman.mapssite.data.Route;
+import org.springframework.data.repository.Repository;
+
+public class RouteRepository implements Repository<Route, Integer> {
 }

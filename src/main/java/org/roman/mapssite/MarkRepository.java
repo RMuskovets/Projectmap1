@@ -1,4 +1,7 @@
 package org.roman.mapssite;
 
-public class MarkRepository {
+import org.roman.mapssite.data.Mark;
+import org.springframework.data.repository.Repository;
+
+public class MarkRepository implements Repository<Mark, Integer> {
 }

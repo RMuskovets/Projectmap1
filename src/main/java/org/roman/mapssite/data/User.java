@@ -3,23 +3,22 @@ package org.roman.mapssite.data;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import org.roman.mapssite.data.json.DataClass;
 
-//import javax.persistence.*;
+import javax.persistence.*;
 
-@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY) //@Entity
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY) @Entity
 public class User implements DataClass {
 
-    private static Integer CURRENT_ID = 0;
 
-    //@Column
-    private Integer ID = CURRENT_ID++;
+    @Column @Id @GeneratedValue
+    private Integer id;
 
-    //@Column
+    @Column
     private String username;
 
-    //@Column
+    @Column
     private String password; // SHA-256 encrypted
 
-    //@Column
+    @Column
     private Integer type;
 
     public String getUsername() {
@@ -61,6 +60,44 @@ public class User implements DataClass {
     }
 
     public Integer getID() {
-        return ID;
+        return id;
+    }
+
+    public static class Builder {
+        private String n, p;
+        private Integer t;
+
+        public Builder(String n, String p, Integer t) {
+            this.n = n;
+            this.p = p;
+            this.t = t;
+        }
+
+        public Builder(String n, String p) {
+            this.n = n;
+            this.p = p;
+        }
+
+        public Builder() {
+        }
+
+        public Builder setName(String n) {
+            this.n = n;
+            return this;
+        }
+
+        public Builder setPassword(String p) {
+            this.p = p;
+            return this;
+        }
+
+        public Builder setType(Integer t) {
+            this.t = t;
+            return this;
+        }
+
+        public User build() {
+            return new User(n, p, t);
+        }
     }
 }

@@ -3,21 +3,21 @@ package org.roman.mapssite.data;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import org.roman.mapssite.data.json.DataClass;
 
-//import javax.persistence.*;
+import javax.persistence.*;
 import java.util.*;
 
-@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY) //@Entity
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY) @Entity
 public class Event implements DataClass {
 
-    //@Column @GeneratedValue
+    @Column @GeneratedValue @Id
     private Integer ID;
-    //@Column
+    @Column
     private String name;
-    //@Column(name="chas_pochatok")
+    @Column(name="chas_pochatok")
     private Date start;
-    //@Column(name="chas_kinec")
+    @Column(name="chas_kinec")
     private Date end;
-    //@Column @ManyToMany(targetEntity = User.class, cascade=CascadeType.REMOVE)
+    @Column @ManyToMany(targetEntity = User.class, cascade=CascadeType.REMOVE)
     private List<User> zaprosheni;
 
     public String getName() {

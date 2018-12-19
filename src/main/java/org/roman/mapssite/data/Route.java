@@ -5,15 +5,18 @@ import org.roman.mapssite.data.json.DataClass;
 
 import java.util.*;
 
-//import javax.persistence.Entity;
+import javax.persistence.*;
 
-@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY) //@Entity
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY) @Entity
 public class Route implements DataClass {
 
     //private Integer id = IDGenerator.generateID(Route.class);
 
+    @Column
+    @GeneratedValue @Id
     private Integer id;
 
+    @Column @OneToMany(targetEntity = Mark.class, cascade = CascadeType.REMOVE)
     private List<Mark> marks = new ArrayList<>();
 
 
