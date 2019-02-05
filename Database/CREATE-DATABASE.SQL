@@ -10,7 +10,7 @@ CREATE TABLE `event` (
 DROP TABLE IF EXISTS `event_zaprosheni`;
 CREATE TABLE `event_zaprosheni` (
   `event_id` int(11) NOT NULL,
-  `zaprosheni_id` int(11) NOT NULL,
+  `zaprosheni_id` int(11) NOT NULL COMMENT 'The ID of a user (binding to the "event_id" event)',
   KEY `FK1ogru0488e75xvqs7mxlg2dpb` (`zaprosheni_id`),
   KEY `FKaarctkrq36bqeq3vs3pbqq0i2` (`event_id`),
   CONSTRAINT `FKaarctkrq36bqeq3vs3pbqq0i2` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`),
@@ -20,8 +20,8 @@ CREATE TABLE `event_zaprosheni` (
 DROP TABLE IF EXISTS `mark`;
 CREATE TABLE `mark` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `coordx` double NOT NULL,
-  `coordy` double NOT NULL,
+  `coordx` double NOT NULL COMMENT 'The X coordinate',
+  `coordy` double NOT NULL COMMENT 'The Y coordinate',
   `name` varchar(255) NOT NULL,
   `ownerid` int(11) NOT NULL,
   --`typeid` int(11) NOT NULL,
