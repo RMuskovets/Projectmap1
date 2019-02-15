@@ -4,6 +4,8 @@ CREATE TABLE `event` (
   `chas_kinec` datetime NOT NULL COMMENT 'The finish time of the event',
   `name` varchar(255) NOT NULL,
   `chas_pochatok` datetime NOT NULL COMMENT 'The start time of the event',
+  `state` int(11) NOT NULL,
+  FOREIGN KEY (`state`) REFERENCES `state` (`state_id`),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -25,7 +27,9 @@ CREATE TABLE `mark` (
   `name` varchar(255) NOT NULL,
   `ownerid` int(11) NOT NULL,
   --`typeid` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  `state` int(11) NOT NULL,
+  FOREIGN KEY (`state`) REFERENCES `state` (`state_id`),
   KEY `FKl4y65527fiucf940f8v8mpg7d` (`ownerid`),
   --KEy `FKl4y65527fiucf940f8v8mpg7e` (`typeid`),
   CONSTRAINT `FKl4y65527fiucf940f8v8mpg7d` FOREIGN KEY (`ownerid`) REFERENCES `user` (`id`)
@@ -34,6 +38,8 @@ CREATE TABLE `mark` (
 DROP TABLE IF EXISTS `route`;
 CREATE TABLE `route` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `state` int(11) NOT NULL,
+  FOREIGN KEY (`state`) REFERENCES `state` (`state_id`),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -60,5 +66,15 @@ CREATE TABLE `user` (
   `password` varchar(255) NOT NULL,
   `type` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
+  `state` int(11) NOT NULL,
+  FOREIGN KEY (`state`) REFERENCES `state` (`state_id`),
   PRIMARY KEY (`id`) 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `state` (
+  `state_id` int(11) NOT NULL AUTO_INCREMENT,
+  `date_created` datetime NOT NULL DEFAULT systime(),
+  `date_deleted` datetime NOT NULL DEFAULT systime(),
+  `deleted` bool NOT NULL default false,
+  PRIMARY KEY (`state_id`)
+);
