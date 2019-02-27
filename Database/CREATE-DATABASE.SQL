@@ -64,9 +64,9 @@ CREATE TABLE `state`
 	`name` varchar(255)
 );
 
-ALTER TABLE `user` ADD FOREIGN KEY (`type`) REFERENCES `type` (`id`);
+ALTER TABLE `user` ADD CONSTRAINT `FK_type` FOREIGN KEY (`type`) REFERENCES `type` (`id`);
 
-ALTER TABLE `mark` ADD FOREIGN KEY (`id`) REFERENCES `route_marks` (`marks_id`);
+ALTER TABLE `mark` ADD CONSRTAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `route_marks` (`marks_id`);
 
 ALTER TABLE `route` ADD FOREIGN KEY (`id`) REFERENCES `route_marks` (`route_id`);
 
