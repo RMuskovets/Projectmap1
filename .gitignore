@@ -25,3 +25,4 @@
 /.nb-gradle/
 errors
 generate_inserts.py
+Database/*

@@ -3,8 +3,13 @@ package org.roman.mapssite.data;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import org.roman.mapssite.data.json.DataClass;
 
-import javax.persistence.*;
-import java.util.*;
+import javax.persistence.Id;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Entity;
+import javax.persistence.CascadeType;
+import javax.persistence.ManyToMany;
+import java.util.List;
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY) @Entity
 public class Event implements DataClass {
