@@ -68,14 +68,14 @@ ALTER TABLE `user` ADD CONSTRAINT `FK_type` FOREIGN KEY (`type`) REFERENCES `typ
 
 ALTER TABLE `mark` ADD CONSRTAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `route_marks` (`marks_id`);
 
-ALTER TABLE `route` ADD FOREIGN KEY (`id`) REFERENCES `route_marks` (`route_id`);
+ALTER TABLE `route` ADD CONSTRAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `route_marks` (`route_id`);
 
-ALTER TABLE `mark` ADD FOREIGN KEY (`ownerid`) REFERENCES `user` (`id`);
+ALTER TABLE `mark` ADD CONSTRAINT `FK_owner` FOREIGN KEY (`ownerid`) REFERENCES `user` (`id`);
 
-ALTER TABLE `event_zaprosheni` ADD FOREIGN KEY (`event_id`) REFERENCES `event` (`id`);
+ALTER TABLE `event_zaprosheni` ADD CONSTRAINT `FK_event` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`);
 
-ALTER TABLE `event_zaprosheni` ADD FOREIGN KEY (`zaprosheni_id`) REFERENCES `user` (`id`);
+ALTER TABLE `event_zaprosheni` ADD CONSTRAINT `FK_user` FOREIGN KEY (`zaprosheni_id`) REFERENCES `user` (`id`);
 
-ALTER TABLE `state` ADD FOREIGN KEY (`id`) REFERENCES `mark` (`state`);
+ALTER TABLE `state` ADD CONSTRAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `mark` (`state`);
 
-ALTER TABLE `state` ADD FOREIGN KEY (`id`) REFERENCES `user` (`state`);
+ALTER TABLE `state` ADD CONSTRAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `user` (`state`);
