@@ -1,6 +1,4 @@
-let _exports = exports || module.exports || {};
-
-function apiGet(api, handleFunction=(()=>{}), data_path='_embedded/', base_uri='api') {
+function apiGet(api, handleFunction=((...)=>{}), data_path='_embedded/', base_uri='api') {
 	let url = `http://${window.location.host}/${base_uri}/${api}`;
 
 	function handle(fn, path)  {
@@ -23,5 +21,3 @@ function apiGet(api, handleFunction=(()=>{}), data_path='_embedded/', base_uri='
 		dataType: 'application/json'
 	});
 }
-
-_exports.apiGet = apiGet;
