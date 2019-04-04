@@ -1,5 +1,5 @@
 function href2id(object) {
-	var href = object._links.self;
+	var href = object._links.self.href;
 	var spl  = href.split('/');
 	var ints = spl[spl.length-1];
 
