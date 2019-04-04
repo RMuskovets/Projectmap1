@@ -1,16 +1,25 @@
-function append(user) {
+function href2id(object) {
+	var href = object._links.self;
+	var spl  = href.split('/');
+	var ints = spl[spl.length-1];
 
-	var username = user.username;
-	var password = user.password;
-	var type	 = conversionTable[user.type.toString()];
+	return parseInt(ints);
+}
 
-	var elementHTML = `<tr><td>${type}</td><td>${username}</td><td>${password}</td></tr>`;
-	var jqElem		= $(elementHTML);
-	$('#tbody').append(jqElem);
+function append(mark) {
+	var x = mark.coord_x, y = mark.coord_y;
+	var name = mark.name;
+	$.get(`api/users/${mark.owner_id}`, "", function (owner) {
+		var owner_td = `<td>${owner.username}</td>`;
+
+		var tr = `<tr><td>${href2if(mark)}</td><td>${name}</td><td>${x}</td><td>${y}</td>${owner_td}</tr>`;
+
+		$('#tbody').append($(tr));
+	});
 }
 
 $.getJSON("api/marks", "", function (data) {
     $.each(data._embedded.marks, function (index, user) {
-        appendUser(user);
+        append(user);
     })
 })
