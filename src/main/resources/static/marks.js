@@ -12,7 +12,7 @@ function append(mark) {
 	$.get(`api/users/${mark.owner_id}`, "", function (owner) {
 		var owner_td = `<td>${owner.username}</td>`;
 
-		var tr = `<tr><td>${href2if(mark)}</td><td>${name}</td><td>${x}</td><td>${y}</td>${owner_td}</tr>`;
+		var tr = `<tr><td>${href2id(mark)}</td><td>${name}</td><td>${x}</td><td>${y}</td>${owner_td}</tr>`;
 
 		$('#tbody').append($(tr));
 	});
