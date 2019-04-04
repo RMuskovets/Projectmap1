@@ -1,6 +1,6 @@
 package org.roman.mapssite.data;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.*;
 import org.roman.mapssite.data.json.DataClass;
 
 import javax.persistence.*;
@@ -9,13 +9,13 @@ import javax.persistence.*;
 public class User implements DataClass {
 
 
-    @Column @Id @GeneratedValue
+    @Column @Id @GeneratedValue 
     private Integer id;
 
     @Column
     private String username;
 
-    @Column
+    @Column //@JsonIgnore
     private String password; // SHA-256 encrypted
 
     @Column
@@ -59,8 +59,12 @@ public class User implements DataClass {
     public User() {
     }
 
-    public Integer getID() {
+    public Integer getId() {
         return id;
+    }
+    
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public static class Builder {
