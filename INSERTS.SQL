@@ -1,9 +1,9 @@
 DROP TABLE IF EXISTS `event`;
 CREATE TABLE `event` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `chas_kinec` datetime DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `chas_pochatok` datetime DEFAULT NULL,
+  `chas_kinec` datetime NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `chas_pochatok` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -17,23 +17,18 @@ CREATE TABLE `event_zaprosheni` (
   CONSTRAINT `FK1ogru0488e75xvqs7mxlg2dpb` FOREIGN KEY (`zaprosheni_id`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-DROP TABLE IF EXISTS `hibernate_sequence`;
-CREATE TABLE `hibernate_sequence` (
-  `next_val` bigint(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-LOCK TABLES `hibernate_sequence` WRITE;
-INSERT INTO `hibernate_sequence` VALUES (1),(1),(1),(1),(1);
-UNLOCK TABLES;
-
 DROP TABLE IF EXISTS `mark`;
 CREATE TABLE `mark` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `coordx` double NOT NULL,
   `coordy` double NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `ownerid` int(11) DEFAULT NULL,
-  `typeid` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `ownerid` int(11) NOT NULL,
+  --`typeid` int(11) NOT NULL,
   PRIMARY KEY (`id`)
+  KEY `FKl4y65527fiucf940f8v8mpg7d` (`ownerid`),
+  --KEy `FKl4y65527fiucf940f8v8mpg7e` (`typeid`),
+  CONSTRAINT `FKl4y65527fiucf940f8v8mpg7d` FOREIGN KEY (`ownerid`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `route`;
@@ -55,7 +50,7 @@ CREATE TABLE `route_marks` (
 DROP TABLE IF EXISTS `type`;
 CREATE TABLE `type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
   `parentid` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -63,18 +58,18 @@ CREATE TABLE `type` (
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `password` varchar(255) DEFAULT NULL,
-  `type` int(11) DEFAULT NULL,
-  `username` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `password` varchar(255) NOT NULL,
+  `type` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`) 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-insert into type (name) VALUES ('USER');
-insert into type (name, parentid) VALUES ('GUEST', 0);
-insert into type (name, parentid) VALUES ('REGISTERED', 0);
-insert into type (name, parentid) VALUES ('MODERATOR', 0);
-insert into type (name, parentid) VALUES ('ADMINISTRATOR', 0);
-insert into type (name, parentid) VALUES ('OWNER', 0);
+insert into type (id, name) VALUES (000, 'GUEST');
+insert into type (id, name) VALUES (100, 'USER');
+insert into type (id, name) VALUES (200, 'ACTIVE');
+insert into type (id, name) VALUES (300, 'CREATOR');
+insert into type (id, name) VALUES (400, 'MODER');
+insert into type (id, name) VALUES (1000, 'ADMIN');
 
 insert into user (type, username, password) VALUES (1, 'GUEST', '');
 insert into user (type, username, password) VALUES (2, 'JOHNDOE', 'JOHNDOE');
@@ -82,12 +77,10 @@ insert into user (type, username, password) VALUES (2, 'JANEDOE', 'JANEDOE');
 insert into user (type, username, password) VALUES (2, 'USER', 'USER');
 insert into user (type, username, password) VALUES (3, 'MODER', 'MODER');
 insert into user (type, username, password) VALUES (4, 'ADMIN', 'ADMIN');
-insert into user (type, username, password) VALUES (5, 'PyThon4g', 'PyThon4g');
-insert into user (type, username, password) VALUES (5, 'RoiMan', '164352');
 insert into user (type, username, password) VALUES (2, '..USER..NOT..EXISTS..', '?');
 insert into user (type, username, password) VALUES (2, '?', '?');
 insert into user (type, username, password) VALUES (2, '', '');
-insert into user (type, username, password) VALUES (2, '+-*/', 'math');
+insert into user (type, username, password) VALUES (2, '+-*/sqrt abs tan cos', 'sqrtabstancos');
 
 INSERT INTO user (type, username, password) VALUES (1, "abcdefgh", "abcdefgh");
 INSERT INTO user (type, username, password) VALUES (1, "abcdefgi", "abcdefgi");

@@ -1,0 +1,66 @@
+{
+	"dbName": "projectmap",
+	"tables": [
+		{
+			"tblName": "event",
+			"columns": [
+				{"name":"id","type":"int","size":11,"null":false},
+				{"name":"chas_kinec","type":"time","null":false},
+				{"name":"name","type":"string","size":255,"null":false},
+				{"name":"chas_pochatok","type":"time","null":false}
+			],
+			"keys": [{"column":"id","type":"primary"}],
+			"engine": "InnoDB",
+			"charset": "utf8mb4"
+		},
+
+		{
+			"tblName": "event_zaprosheni",
+			"columns": [
+				{"name":"event_id","type":"int","size":11,"null":false},
+				{"name":"zaprosheni_id","type":"int","size":11,"null":false}
+			],
+			"constraint-keys":[{"FK1ogru0488e75xvqs7mxlg2dpb":"zaprosheni_id"},{"FKaarctkrq36bqeq3vs3pbqq0i2":"event_id"}],
+			"keys": [
+				{"type":"foreign","column":"event_id","constraint":"FK1ogru0488e75xvqs7mxlg2dpb","ref":{"tblName":"event","column":"id"}},
+				{"type":"foreign","column":"zaprosheni_id","constraint":"FKaarctkrq36bqeq3vs3pbqq0i2","ref":{"tblName":"user","column":"id"}}
+			],
+		},
+
+		{
+			"tblName": "mark",
+			"columns": [
+				{"name":"id","type":"int","size":11,"null":false},
+				{"name":"coordx","type":"double","null":false},
+				{"name":"coordy","type":"double","null":false},
+				{"name":"name","type":"string","size":255,"null":false},
+				{"name":"ownerid","type":"int","size":11,"null":false}
+			],
+			"constraint-keys":[{"FKl4y65527fiucf940f8v8mpg7d":"ownerid"}],
+			"keys": [
+				{"type":"foreign","column":"ownerid","constraint":"FKl4y65527fiucf940f8v8mpg7d","ref":{"tblName":"event","column":"id"}}
+			]
+		},
+
+		{
+			"tblName": "route",
+			"columns": [
+				{"name":"id","type":"int","size":11,"null":false}
+			],
+			"keys": [
+				{"column":"id","type":"primary"}
+			]
+		},
+
+		{
+			"tblName": "route_marks",
+			"columns": [
+				{"name":"route_id","type":"int","size":11,"null":false},
+				{"name":"marks_id","type":"int","size":11,"null":false}
+			],
+			"constraint-keys": [
+				
+			]
+		}
+	]
+}

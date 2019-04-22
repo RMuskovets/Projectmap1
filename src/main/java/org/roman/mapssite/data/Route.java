@@ -3,9 +3,14 @@ package org.roman.mapssite.data;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import org.roman.mapssite.data.json.DataClass;
 
-import java.util.*;
+import java.util.List;
 
-import javax.persistence.*;
+import javax.persistence.Id;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Entity;
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY) @Entity
 public class Route implements DataClass {

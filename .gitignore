@@ -24,5 +24,6 @@
 /nbdist/
 /.nb-gradle/
 errors
-Database/*
-src/main/js/node_modules/
+#Database/*
+gconfig.sh
+src/main/js/node_modules/*
