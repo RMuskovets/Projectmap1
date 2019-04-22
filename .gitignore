@@ -25,3 +25,4 @@
 /.nb-gradle/
 errors
 Database/*
+src/main/js/node_modules/
