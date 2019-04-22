@@ -24,5 +24,6 @@
 /nbdist/
 /.nb-gradle/
 errors
-generate_inserts.py
-Database/*
+#Database/*
+gconfig.sh
+src/main/js/node_modules/*

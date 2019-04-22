@@ -24,10 +24,10 @@ CREATE TABLE `mark` (
   `coordy` double NOT NULL COMMENT 'The Y coordinate',
   `name` varchar(255) NOT NULL,
   `ownerid` int(11) NOT NULL,
-  --`typeid` int(11) NOT NULL,
+  -- `typeid` int(11) NOT NULL,
   PRIMARY KEY (`id`)
   KEY `FKl4y65527fiucf940f8v8mpg7d` (`ownerid`),
-  --KEy `FKl4y65527fiucf940f8v8mpg7e` (`typeid`),
+  -- KEy `FKl4y65527fiucf940f8v8mpg7e` (`typeid`),
   CONSTRAINT `FKl4y65527fiucf940f8v8mpg7d` FOREIGN KEY (`ownerid`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

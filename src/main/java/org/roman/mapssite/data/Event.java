@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Entity;
 import javax.persistence.CascadeType;
 import javax.persistence.ManyToMany;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY) @Entity
