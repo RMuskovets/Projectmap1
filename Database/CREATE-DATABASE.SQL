@@ -66,7 +66,7 @@ CREATE TABLE `user`
 
 ALTER TABLE `user` ADD CONSTRAINT `FK_type` FOREIGN KEY (`type`) REFERENCES `type` (`id`);
 
-ALTER TABLE `mark` ADD CONSRTAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `route_marks` (`marks_id`);
+ALTER TABLE `mark` ADD CONSTRAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `route_marks` (`marks_id`);
 
 ALTER TABLE `route` ADD CONSTRAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `route_marks` (`route_id`);
 
