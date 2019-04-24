@@ -61,6 +61,10 @@ public class Event implements DataClass {
         return this;
     }
 
+    public Integer getID() {
+        return ID;
+    }
+
     private Event(String name, Date start, Date end, List<User> zaprosheni) {
         this.name = name;
         this.start = start;
