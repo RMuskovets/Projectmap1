@@ -1,69 +1,81 @@
-DROP TABLE IF EXISTS `event`;
-CREATE TABLE `event` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `chas_kinec` datetime NOT NULL COMMENT 'The finish time of the event',
-  `name` varchar(255) NOT NULL,
-  `chas_pochatok` datetime NOT NULL COMMENT 'The start time of the event',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `event` 
+(
+	`id` int not null auto_increment,
+	`chas_kinec` datetime not null,
+	`name` varchar(255) not null,
+	`chas_pochatok` datetime not null,
+	`create` datetime not null,
+	`delete` datetime not null,
+	`modify` datetime not null
+);
 
-DROP TABLE IF EXISTS `event_zaprosheni`;
-CREATE TABLE `event_zaprosheni` (
-  `event_id` int(11) NOT NULL,
-  `zaprosheni_id` int(11) NOT NULL COMMENT 'The ID of a user (binding to the "event_id" event)',
-  -- KEY `FK1ogru0488e75xvqs7mxlg2dpb` (`zaprosheni_id`),
-  -- KEY `FKaarctkrq36bqeq3vs3pbqq0i2` (`event_id`),
-  -- CONSTRAINT `FKaarctkrq36bqeq3vs3pbqq0i2` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`),
-  -- CONSTRAINT `FK1ogru0488e75xvqs7mxlg2dpb` FOREIGN KEY (`zaprosheni_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `event_zaprosheni` 
+(
+	`event_id` int,
+	`zaprosheni_id` int
+);
 
-DROP TABLE IF EXISTS `mark`;
-CREATE TABLE `mark` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `coordx` double NOT NULL COMMENT 'The X coordinate',
-  `coordy` double NOT NULL COMMENT 'The Y coordinate',
-  `name` varchar(255) NOT NULL,
-  `ownerid` int(11) NOT NULL,
-  -- `typeid` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-  -- KEY `FKl4y65527fiucf940f8v8mpg7d` (`ownerid`),
-  -- KEy `FKl4y65527fiucf940f8v8mpg7e` (`typeid`),
-  -- CONSTRAINT `FKl4y65527fiucf940f8v8mpg7d` FOREIGN KEY (`ownerid`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `mark` 
+(
+	`id` int not null auto_increment,
+	`coordx` double not null,
+	`coordy` double not null,
+	`name` varchar(255) not null,
+	`owner_id` int not null,
+	`state` int not null,
+	`create` datetime not null,
+	`delete` datetime not null,
+	`modify` datetime not null
+);
 
-DROP TABLE IF EXISTS `route`;
-CREATE TABLE `route` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `route` 
+(
+	`id` int not null,
+	`name` varchar(255) not null
+);
 
-DROP TABLE IF EXISTS `route_marks`;
-CREATE TABLE `route_marks` (
-  `route_id` int(11) NOT NULL COMMENT 'Route ID',
-  `marks_id` int(11) NOT NULL COMMENT 'Current mark ID',
-  -- UNIQUE KEY `UK_fcbj7eowimbrmfm8we2etjkr4` (`marks_id`),
-  -- KEY `FKl4y65527fiucf940f8v8mpg7c` (`route_id`),
-  -- CONSTRAINT `FKl4y65527fiucf940f8v8mpg7c` FOREIGN KEY (`route_id`) REFERENCES `route` (`id`),
-  -- CONSTRAINT `FKhvmaqolulr4y7j8ghblevuba7` FOREIGN KEY (`marks_id`) REFERENCES `mark` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `route_marks` 
+(
+	`route_id` int not null,
+	`marks_id` int not null
+);
 
-DROP TABLE IF EXISTS `type`;
-CREATE TABLE `type` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `type` 
+(
+	`id` int,
+	`name` varchar(255)
+);
 
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `password` varchar(255) NOT NULL,
-  `type` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `firstName` varchar(255) NOT NULL,
-  `lastName` varchar(255) NOT NULL,
-  `birthDate` datetime not null,
-  `phoneNumber` varchar(255) not null
-  PRIMARY KEY (`id`) 
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `user` 
+(
+	`id` int not null auto_increment,
+	`password` varchar(255) not null,
+	`type` int not null,
+	`username` varchar(255) not null,
+	`state` int not null,
+	`create` datetime not null,
+	`delete` datetime not null,
+	`modify` datetime not null,
+	`email` varchar(255) NOT NULL,
+	`firstName` varchar(255) NOT NULL,
+	`lastName` varchar(255) NOT NULL,
+	`birthDate` datetime not null,
+	`phoneNumber` varchar(255) not null
+);
+
+
+ALTER TABLE `user` ADD CONSTRAINT `FK_type` FOREIGN KEY (`type`) REFERENCES `type` (`id`);
+
+ALTER TABLE `mark` ADD CONSRTAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `route_marks` (`marks_id`);
+
+ALTER TABLE `route` ADD CONSTRAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `route_marks` (`route_id`);
+
+ALTER TABLE `mark` ADD CONSTRAINT `FK_owner` FOREIGN KEY (`ownerid`) REFERENCES `user` (`id`);
+
+ALTER TABLE `event_zaprosheni` ADD CONSTRAINT `FK_event` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`);
+
+ALTER TABLE `event_zaprosheni` ADD CONSTRAINT `FK_user` FOREIGN KEY (`zaprosheni_id`) REFERENCES `user` (`id`);
+
+ALTER TABLE `state` ADD CONSTRAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `mark` (`state`);
+
+ALTER TABLE `state` ADD CONSTRAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `user` (`state`);
