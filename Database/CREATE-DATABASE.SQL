@@ -60,5 +60,10 @@ CREATE TABLE `user` (
   `password` varchar(255) NOT NULL,
   `type` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `firstName` varchar(255) NOT NULL,
+  `lastName` varchar(255) NOT NULL,
+  `birthDate` datetime not null,
+  `phoneNumber` varchar(255) not null
   PRIMARY KEY (`id`) 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
