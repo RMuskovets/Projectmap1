@@ -3,10 +3,7 @@ package org.roman.mapssite.data;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import org.roman.mapssite.data.json.DataClass;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY) @Entity
 public class Mark implements DataClass {
@@ -21,16 +18,18 @@ public class Mark implements DataClass {
     private double coord_y;
     @Column
     private String name;
-    @Column(name="ownerID")
-    private Integer owner_id = -1;
+//    @Column(name="ownerID")
+//    private Integer owner_id = -1;
+    @OneToOne(targetEntity = User.class,cascade = CascadeType.REMOVE, optional=false)
+    private User owner;
 
     private Mark(Integer type_id, double coord_x, double coord_y, String name,
-                Integer owner_id) {
+                User owner) {
         this.type_id = type_id;
         this.coord_x = coord_x;
         this.coord_y = coord_y;
         this.name = name;
-        this.owner_id = owner_id;
+        this.owner = owner;
     }
 
     private Mark(Integer type_id, double coord_x, double coord_y, String name) {
@@ -72,54 +71,56 @@ public class Mark implements DataClass {
         this.name = name;
     }
 
-    public Integer getOwner_id() {
-        return owner_id;
-    }
-
-    public void setOwner_id(Integer owner_id) {
-        this.owner_id = owner_id;
-    }
+//    public Integer getOwner_id() {
+//        return owner_id;
+//    }
+//
+//    public vo setOwner_id(Integer owner_id) {
+//        this.owner_id = owner_id;
+//    }
 
     public Integer getId() {
         return id;
     }
 
-    public Integer getType_id() {
-        return type_id;
-    }
+    //public Integer getType_id() {
+    //    return type_id;
+    //}
 
     public static class Builder {
 
-        private Integer tid, oid;
+        //private Integer tid, o;
+        private Integer tid;
+        private User o;
         private String n;
         private double cx, cy;
 
         public Builder() { }
 
-        public Builder(Integer tid, Integer oid, String n, double cx, double cy) {
+        public Builder(Integer tid, User o, String n, double cx, double cy) {
             this.tid = tid;
-            this.oid = oid;
+            this.o = o;
             this.n = n;
             this.cx = cx;
             this.cy = cy;
         }
 
-        public Builder(Integer tid, Integer oid, double cx, double cy) {
+        public Builder(Integer tid, User o, double cx, double cy) {
             this.tid = tid;
-            this.oid = oid;
+            this.o = o;
             this.cx = cx;
             this.cy = cy;
         }
 
-        public Builder(Integer tid, Integer oid, String n) {
+        public Builder(Integer tid, User o, String n) {
             this.tid = tid;
-            this.oid = oid;
+            this.o = o;
             this.n = n;
         }
 
-        public Builder(Integer tid, Integer oid) {
+        public Builder(Integer tid, User o) {
             this.tid = tid;
-            this.oid = oid;
+            this.o = o;
         }
 
         public Builder setTid(Integer tid) {
@@ -127,8 +128,8 @@ public class Mark implements DataClass {
             return this;
         }
 
-        public Builder setOid(Integer oid) {
-            this.oid = oid;
+        public Builder setOid(User o) {
+            this.o = o;
             return this;
         }
 
@@ -148,7 +149,7 @@ public class Mark implements DataClass {
         }
 
         public Mark build() {
-            return new Mark(tid, cx, cy, n, oid);
+            return new Mark(tid, cx, cy, n, o);
         }
     }
 }
