@@ -1,81 +1,118 @@
-CREATE TABLE `event` 
-(
-	`id` int not null auto_increment,
-	`chas_kinec` datetime not null,
-	`name` varchar(255) not null,
-	`chas_pochatok` datetime not null,
-	`create` datetime not null,
-	`delete` datetime not null,
-	`modify` datetime not null
-);
+-- Creating Database
+	DROP DATABASE IF EXISTS `PROJECTMAP`;
+	CREATE DATABASE `PROJECTMAP`;
+	USE PROJECTMAP;
+--
 
-CREATE TABLE `event_zaprosheni` 
-(
-	`event_id` int,
-	`zaprosheni_id` int
-);
+-- Types Table
+	CREATE TABLE `TYPE` (
+		`ID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+		`NAME` VARCHAR(255) NOT NULL
+	);
+--
 
-CREATE TABLE `mark` 
-(
-	`id` int not null auto_increment,
-	`coordx` double not null,
-	`coordy` double not null,
-	`name` varchar(255) not null,
-	`owner_id` int not null,
-	`state` int not null,
-	`create` datetime not null,
-	`delete` datetime not null,
-	`modify` datetime not null
-);
+-- States Table
+	CREATE TABLE `STATE` (
+		`ID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+		`NAME` VARCHAR(255) NOT NULL
+	);
+--
 
-CREATE TABLE `route` 
-(
-	`id` int not null,
-	`name` varchar(255) not null
-);
+-- Users Table & FKs
 
-CREATE TABLE `route_marks` 
-(
-	`route_id` int not null,
-	`marks_id` int not null
-);
+	CREATE TABLE `USER` (
+		`ID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+		`USERNAME` VARCHAR(255) NOT NULL,
+		`PASSWORD` VARCHAR(255) NOT NULL,
+		`TYPE` INT NOT NULL,
+		`STATE`INT NOT NULL,
+		`EMAIL`VARCHAR(255) NOT NULL,
+		`FIRST_NAME` VARCHAR(255) NOT NULL,
+		`LAST_NAME`  VARCHAR(255) NOT NULL,
+		`BIRTH_DATE` DATETIME NOT NULL DEFAULT NOW(),
+		`PHONE_NUMBER` VARCHAR(15) NOT NULL,
+		`CREATED_DATE` DATETIME NOT NULL DEFAULT NOW(),
+		`DELETED_DATE` DATETIME,
+		`MODIFIED_DATE` DATETIME NOT NULL DEFAULT NOW()
+	);
 
-CREATE TABLE `type` 
-(
-	`id` int,
-	`name` varchar(255)
-);
+	ALTER TABLE `USER` ADD CONSTRAINT `FK_USER__TYPE` FOREIGN KEY (`TYPE`) REFERENCES `TYPE` (`ID`);
 
-CREATE TABLE `user` 
-(
-	`id` int not null auto_increment,
-	`password` varchar(255) not null,
-	`type` int not null,
-	`username` varchar(255) not null,
-	`state` int not null,
-	`create` datetime not null,
-	`delete` datetime not null,
-	`modify` datetime not null,
-	`email` varchar(255) NOT NULL,
-	`firstName` varchar(255) NOT NULL,
-	`lastName` varchar(255) NOT NULL,
-	`birthDate` datetime not null,
-	`phoneNumber` varchar(255) not null
-);
+	ALTER TABLE `USER` ADD CONSTRAINT `FK_USER__STATE` FOREIGN KEY (`STATE`)REFERENCES `STATE` (`ID`);
+
+--
+
+-- Marks Table & FKs
+	CREATE TABLE `MARK` (
+		`ID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+		`COORDX` DOUBLE NOT NULL,
+		`COORDY` DOUBLE NOT NULL,
+		`NAME`   VARCHAR(255) NOT NULL,
+		`OWNER_ID` INT NOT NULL,
+		`STATE` INT NOT NULL,
+		`CREATED_DATE` DATETIME NOT NULL DEFAULT NOW(),
+		`DELETED_DATE` DATETIME,
+		`MODIFIED_DATE`DATETIME NOT NULL DEFAULT NOW()
+	);
+
+	ALTER TABLE `MARK` ADD CONSTRAINT `FK_MARK__OWNER` FOREIGN KEY (`OWNER_ID`) REFERENCES `USER` (`ID`);
+
+	ALTER TABLE `MARK` ADD CONSTRAINT `FK_MARK__STATE` FOREIGN KEY (`STATE`) REFERENCES `STATE` (`ID`);
+--
+
+-- Events Table & FKs
+	CREATE TABLE `EVENT` (
+		`ID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+		`START_TIME` DATETIME NOT NULL,
+		`END_TIME`   DATETIME NOT NULL,
+		`NAME` VARCHAR(255) NOT NULL,
+		`WHERE` INT NOT NULL,
+		`CREATED_DATE` DATETIME NOT NULL DEFAULT NOW(),
+		`DELETED_DATE` DATETIME,
+		`MODIFIED_DATE`DATETIME NOT NULL DEFAULT NOW()
+	);
+
+	CREATE TABLE `EVENT_ZAPROSHENI` (
+		`EVENT_ID` INT NOT NULL,
+		`ZAPROSHENI_ID` INT NOT NULL
+	);
+
+	ALTER TABLE `EVENT` ADD CONSTRAINT `FK_EVENT__WHERE` FOREIGN KEY (`WHERE`) REFERENCES `MARK` (`ID`);
 
 
-ALTER TABLE `user` ADD CONSTRAINT `FK_type` FOREIGN KEY (`type`) REFERENCES `type` (`id`);
+	ALTER TABLE `EVENT_ZAPROSHENI` ADD CONSTRAINT `FK_EVENTZAPROSHENI__EVENT_ID` FOREIGN KEY (`EVENT_ID`) REFERENCES `EVENT` (`ID`);
 
-ALTER TABLE `mark` ADD CONSTRAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `route_marks` (`marks_id`);
+	ALTER TABLE `EVENT_ZAPROSHENI` ADD CONSTRAINT `FK_EVENTZAPROSHENI__USER_ID` FOREIGN KEY (`ZAPROSHENI_ID`) REFERENCES `USER` (`ID`);
+--
 
-ALTER TABLE `route` ADD CONSTRAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `route_marks` (`route_id`);
+-- Routes Table & FKs
+	CREATE TABLE `ROUTE`
+	(
+		`ID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+		`NAME` VARCHAR(255) NOT NULL
+	);
 
-ALTER TABLE `mark` ADD CONSTRAINT `FK_owner` FOREIGN KEY (`ownerid`) REFERENCES `user` (`id`);
+	CREATE TABLE `ROUTE_MARKS`
+	(
+		`ROUTE_ID` INT NOT NULL,
+		`MARKS_ID` INT NOT NULL
+	);
 
-ALTER TABLE `event_zaprosheni` ADD CONSTRAINT `FK_event` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`);
+	ALTER TABLE `ROUTE_MARKS` ADD CONSTRAINT `FK_ROUTEMARKS__ROUTE_ID` FOREIGN KEY (`ROUTE_ID`) REFERENCES `ROUTE` (`ID`);
 
-ALTER TABLE `event_zaprosheni` ADD CONSTRAINT `FK_user` FOREIGN KEY (`zaprosheni_id`) REFERENCES `user` (`id`);
+	ALTER TABLE `ROUTE_MARKS` ADD CONSTRAINT `FK_ROUTEMARKS__MARKS_ID` FOREIGN KEY (`MARKS_ID`)
+	REFERENCES `MARKS` (`ID`);
+--
 
-ALTER TABLE `state` ADD CONSTRAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `mark` (`state`);
+-- Inserting Main Data
+	INSERT INTO `TYPE` VALUES (100, "USER");
+	INSERT INTO `TYPE` VALUES (200, "ACTIVE");
+	INSERT INTO `TYPE` VALUES (500, "CREATOR");
+	INSERT INTO `TYPE` VALUES (900, "MODER");
+	INSERT INTO `TYPE` VALUES (1000,"ADMIN");
 
-ALTER TABLE `state` ADD CONSTRAINT `FK_id` FOREIGN KEY (`id`) REFERENCES `user` (`state`);
+	INSERT INTO `STATE` (`NAME`) VALUES ("NORMAL"), ("TMP_REMOVED"), ("BANNED");
+
+	INSERT INTO `STATE` (`ID`, `NAME`) VALUES (100, "OPENED");
+	INSERT INTO `STATE` (`NAME`) VALUES ("CLOSED"), ("UNDER CONSTRUCTION");
+--

@@ -16,8 +16,6 @@ public class Type implements DataClass {
     private Integer id;
     @Column
     private String name;
-    @Column(name="parentID", nullable = false)
-    private Integer parent_id;
 
     private Type(String name, Integer parent_id) {
         this.name = name;
