@@ -20,11 +20,11 @@ PLACE_COUNT = 50
 
 def gen_first_name():
 	length = random.randint(10, 21)
-	return ''.join([random.choice(map(chr, range(97,97+26))) for _ in range(length)]).capitalize()
+	return ''.join([random.choice(list(map(chr, range(97,97+26)))) for _ in range(length)]).capitalize()
 
 def gen_last_name():
 	length = random.randint(5, 45)
-	return ''.join([random.choice(map(chr, range(97,97+26))) for _ in range(length)]).capitalize()
+	return ''.join([random.choice(list(map(chr, range(97,97+26)))) for _ in range(length)]).capitalize()
 
 def gen_random_domain():
 	s = []
