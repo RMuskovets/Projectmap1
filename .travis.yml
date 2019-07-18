@@ -8,11 +8,12 @@ os:
   - linux
 
 before_install:
-  - mysql -e < Database/CREATE-DATABASE.SQL
-  - mysql -e < Database/INSERTS.SQL
+  - mysql -uroot < Database/CREATE-DATABASE.SQL
+  - mysql -uroot < Database/INSERTS.SQL
 
 script:
   - mvn spring-boot:run
+  - mvn clean install spring-boot:repackage
 
 services:
   - mysql
