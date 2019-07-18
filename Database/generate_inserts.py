@@ -29,10 +29,10 @@ def gen_last_name():
 def gen_random_domain():
 	s = []
 	for _ in range(random.randint(5, 10)):
-		s.append(random.choice('abcdefghijklmnopqrstuvwxyz')
+		s.append(random.choice('abcdefghijklmnopqrstuvwxyz'))
 	s.append('.')
 	for _ in range(random.randint(3, 7)):
-		s.append(random.choice('abcdefghijklmnopqrstuvwxyz')
+		s.append(random.choice('abcdefghijklmnopqrstuvwxyz'))
 	return ''.join(s)
 
 def gen_username(fn, ln):
