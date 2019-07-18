@@ -1,4 +1,4 @@
-USE projectmap;
+USE PROJECTMAP;
 INSERT INTO user (id, type, first_name, last_name, email, phone_number, password, birth_date, username) VALUES (0, 1000, "Iuevajooencitiiuu", "Eeouiebukpeo", "ieeouieb@mioiexxolu.aeeieye", "+51289986350858", "7MDw#dYUFAodT", now(), "ieeouieb");
 INSERT INTO user (id, type, first_name, last_name, email, phone_number, password, birth_date, username) VALUES (1, 1000, "Iisaaeizafiaxh", "Ovwdineeuiaooojuiebiuaiyoaoiioi", "iovwdine@uiuueo.bioes", "+36805195084784", "Gl7nX_PP8UbWF_IG9PsgTWtm", now(), "iovwdine");
 INSERT INTO user (id, type, first_name, last_name, email, phone_number, password, birth_date, username) VALUES (2, 1000, "Iceiuuagooxvsaoiim", "Aoduenumiuesicooaaciuiooofi", "iaoduenu@ooaeojotu.nuuktd", "+08761573629038", "TProZ1SHn3", now(), "iaoduenu");
