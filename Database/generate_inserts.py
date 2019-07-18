@@ -58,7 +58,7 @@ def gen_mark_cx():
 def gen_mark_cy():
 	return random.randint(0, 3600) / 10
 
-DATABASE = 'projectmap'
+DATABASE = 'PROJECTMAP'
 
 # INSERTS_FILENAME = sys.argv[1] or 'INSERTS.sql'
 
@@ -75,20 +75,42 @@ def generate_user_sql(id, type, *, first_name=None, last_name=None, email=None, 
 	sql_birth_date = birth_date or gen_birth_date()
 	sql_username   = gen_username(sql_first_name, sql_last_name).lower()
 	sql_email      = email      or gen_email(sql_username).lower()
-	return f'INSERT INTO USER (id, type, first_name, last_name, email, phone_number, password, birth_date, username) VALUES ({id}, {type}, "{sql_first_name}", "{sql_last_name}", "{sql_email}", "{sql_phone_number}", "{sql_password}", {sql_birth_date}, "{sql_username}")'
+	# return f'INSERT INTO USER (id, type, first_name, last_name, email, phone_number, password, birth_date, username) VALUES ({id}, {type}, "{sql_first_name}", "{sql_last_name}", "{sql_email}", "{sql_phone_number}", "{sql_password}", {sql_birth_date}, "{sql_username}")'
+	return 'INSERT INTO USER (ID, TYPE, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, PASSWORD, BIRTH_DATE, USERNAME) VALUES ({}, {}, "{}", "{}", "{}", "{}", "{}", {}, "{}");'.format(
+		id,
+		type,
+		sql_first_name,
+		sql_last_name,
+		sql_email,
+		sql_phone_number,
+		sql_password,
+		sql_birth_date,
+		sql_username
+	)
 
 def generate_place_sql(id, userid_max, *, name=None, coordx=None, coordy=None, owner_id=None):
 	sql_name = name or gen_first_name()
 	sql_cx   = coordx or gen_mark_cx()
 	sql_cy   = coordy or gen_mark_cy()
 	sql_oid  = owner_id or random.randint(0, userid_max)
-	return f'INSERT INTO MARK (id, owner_id, name, coordx, coordy) VALUES ({id}, {sql_oid}, "{sql_name}", {sql_cx}, {sql_cy})'
+	# return f'INSERT INTO MARK (id, owner_id, name, coordx, coordy) VALUES ({id}, {sql_oid}, "{sql_name}", {sql_cx}, {sql_cy})'
+	return 'INSERT INTO MARK (id, owner_id, name, coordx, coordy) VALUES ({}, {}, "{}", {}, {})'.format(
+		id,
+		sql_oid,
+		sql_name,
+		sql_cx,
+		sql_cy
+	)
 
 def generate_event_zaprosheni_sql(eid, muid):
 	zapr_len = random.randint(5, 25)
 	s = []
 	for _ in range(zapr_len):
-		s.append(f'INSERT INTO EVENT_ZAPROSHENI (event_id, zaprosheni_id) VALUES ({eid}, {random.randint(0, muid)});')
+		# s.append(f'INSERT INTO EVENT_ZAPROSHENI (event_id, zaprosheni_id) VALUES ({eid}, {random.randint(0, muid)});')
+		s.append('INSERT INTO EVENT_ZAPROSHENI (event_id, zaprosheni_id) VALUES ({}, {});'.format(
+			eid,
+			random.randint(0, muid)
+		))
 	return '\n'.join(s)
 
 def generate_event_sql(id, userid_max, placeid_max, end=None, start=None, name=None):
@@ -99,7 +121,16 @@ def generate_event_sql(id, userid_max, placeid_max, end=None, start=None, name=N
 
 	sql_zapr = generate_event_zaprosheni_sql(id, userid_max)
 
-	return f'INSERT INTO EVENT (id, end_time, name, start_time, `where`) VALUES ({id}, {sql_end}, "{sql_name}", {sql_start}, {sql_pid});\n{sql_zapr}'
+	# return f'INSERT INTO EVENT (id, end_time, name, start_time, `where`) VALUES ({id}, {sql_end}, "{sql_name}", {sql_start}, {sql_pid});\n{sql_zapr}'
+	return """INSERT INTO EVENT (id, end_time, name, start_time `where`) VALUES ({}, {}, "{}", {}, {});
+	{}""".format(
+		id,
+		sql_end,
+		sql_name,
+		sql_start,
+		sql_pid,
+		sql_zapr
+	)
 
 def generate_inserts():
 	s = []
