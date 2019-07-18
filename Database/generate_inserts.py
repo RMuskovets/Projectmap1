@@ -20,39 +20,19 @@ PLACE_COUNT = 50
 
 def gen_first_name():
 	length = random.randint(10, 21)
-	s = []
-	for _ in range(length):
-		if random.randint(0, 2):
-			s.append(random.choice(['a', 'e', 'i', 'o', 'u']))
-		else:
-			s.append(random.choice('bcdfghjklmnpqrstvwxyz'))
-	s[0] = s[0].upper()
-	return ''.join(s)
+	return ''.join([random.choice(map(chr, range(97,97+26))) for _ in range(length)]).capitalize()
 
 def gen_last_name():
 	length = random.randint(5, 45)
-	s = []
-	for _ in range(length):
-		if random.randint(0, 2):
-			s.append(random.choice(['a', 'e', 'i', 'o', 'u']))
-		else:
-			s.append(random.choice('bcdfghjklmnpqrstvwxyz'))
-	s[0] = s[0].upper()
-	return ''.join(s)
+	return ''.join([random.choice(map(chr, range(97,97+26))) for _ in range(length)]).capitalize()
 
 def gen_random_domain():
 	s = []
 	for _ in range(random.randint(5, 10)):
-		if random.randint(0, 2):
-			s.append(random.choice(['a', 'e', 'i', 'o', 'u']))
-		else:
-			s.append(random.choice('bcdfghjklmnpqrstvwxyz'))
+		s.append(random.choice('abcdefghijklmnopqrstuvwxyz')
 	s.append('.')
 	for _ in range(random.randint(3, 7)):
-		if random.randint(0, 2):
-			s.append(random.choice(['a', 'e', 'i', 'o', 'u']))
-		else:
-			s.append(random.choice('bcdfghjklmnpqrstvwxyz'))
+		s.append(random.choice('abcdefghijklmnopqrstuvwxyz')
 	return ''.join(s)
 
 def gen_username(fn, ln):
