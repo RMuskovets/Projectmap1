@@ -65,7 +65,7 @@ DATABASE = 'PROJECTMAP'
 try:
 	INSERTS_FILENAME = sys.argv[1]
 except IndexError:
-	INSERTS_FILENAME = 'INSERTS.sql'
+	INSERTS_FILENAME = 'INSERTS.SQL'
 
 def generate_user_sql(id, type, *, first_name=None, last_name=None, email=None, phone_number=None, password=None, birth_date=None):
 	sql_first_name = first_name or gen_first_name()
