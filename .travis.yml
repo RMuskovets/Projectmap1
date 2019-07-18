@@ -10,6 +10,7 @@ os:
 before_install:
   - pushd Database
   - python3 generate_inserts.py
+  - ls -l
   - mysql -uroot < CREATE-DATABASE.SQL
   - mysql -uroot < INSERTS.SQL
   - popd >/dev/null
