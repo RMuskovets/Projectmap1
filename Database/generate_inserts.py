@@ -177,7 +177,7 @@ def generate_inserts():
 
 	for k in OFFSETS:
 		# o = sum(OFFSETS[:k+1].values())
-		o = sum(tuple(OFFSETS.values())[:tuple(OFFSETS.keys().index(k)+1]))
+		o = sum(tuple(OFFSETS.values())[:tuple(OFFSETS.keys()).index(k)+1]))
 		c = COUNTS[k]
 		for id in range(o, o+c):
 			s.append(generate_user_sql(id, k)
