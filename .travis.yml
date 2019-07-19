@@ -6,12 +6,12 @@ jdk:
 os:
   - linux
 
-before_install:
+before_script:
   - pushd Database
   - python3 generate_inserts.py
   - ls -l
   - mysql -uroot < CREATE-DATABASE.SQL
-  - mysql -uroot < INSERTS.SQL
+  - mysql -uroot < INSERTS.SQL || cat INSERTS.SQL | head -n 20
   - popd >/dev/null
 
 script:
