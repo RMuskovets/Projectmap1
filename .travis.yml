@@ -6,6 +6,8 @@ jdk:
 os:
   - linux
 
+sudo: true
+
 before_script:
   - pushd Database
   - python3 generate_inserts.py
