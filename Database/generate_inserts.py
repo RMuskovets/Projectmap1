@@ -133,31 +133,60 @@ def generate_event_sql(id, userid_max, placeid_max, end=None, start=None, name=N
 		sql_zapr
 	)
 
+OFFSETS = {
+	1000: 0,
+	900 : ADMINS_COUNT,
+	500 : MODERS_COUNT,
+	200 : CREATOR_COUNT,
+	100 : ACTIVE_COUNT
+}
+
+COUNTS = {
+	1000: ADMINS_COUNT,
+	900 : MODERS_COUNT,
+	500 : CREATOR_COUNT,
+	200 : ACTIVE_COUNT,
+	100 : USER_COUNT
+}
+
 def generate_inserts():
 	s = []
-	userid = 0
-	for id in range(ADMINS_COUNT):
-		userid = id
-		s.append(generate_user_sql(id, 1000))
-	userid += 1
-	for id in range(MODERS_COUNT):
-		userid = ADMINS_COUNT + id
-		s.append(generate_user_sql(userid, 900))
-	userid += 1
-	for id in range(CREATOR_COUNT):
-		userid = ADMINS_COUNT + MODERS_COUNT + id
-		s.append(generate_user_sql(userid, 500))
-	for id in range(ACTIVE_COUNT):
-		userid = ADMINS_COUNT + MODERS_COUNT + CREATOR_COUNT + id
-		s.append(generate_user_sql(userid, 200))
-	for id in range(USER_COUNT):
-		userid = ADMINS_COUNT + MODERS_COUNT + CREATOR_COUNT + ACTIVE_COUNT + id
-		s.append(generate_user_sql(userid, 100))
+# 	userid = 0
+# 	for id in range(ADMINS_COUNT):
+# 		userid = id
+# 		s.append(generate_user_sql(id, 1000))
+# 	userid += 1
+# 	for id in range(MODERS_COUNT):
+# 		userid = ADMINS_COUNT + id
+# 		s.append(generate_user_sql(userid, 900))
+# 	userid += 1
+# 	for id in range(CREATOR_COUNT):
+# 		userid = ADMINS_COUNT + MODERS_COUNT + id
+# 		s.append(generate_user_sql(userid, 500))
+# 	for id in range(ACTIVE_COUNT):
+# 		userid = ADMINS_COUNT + MODERS_COUNT + CREATOR_COUNT + id
+# 		s.append(generate_user_sql(userid, 200))
+# 	for id in range(USER_COUNT):
+# 		userid = ADMINS_COUNT + MODERS_COUNT + CREATOR_COUNT + ACTIVE_COUNT + id
+# 		s.append(generate_user_sql(userid, 100))
 
-	for id in range(PLACE_COUNT):
-		s.append(generate_place_sql(id, userid))
-	for id in range(EVENT_COUNT):
-		s.append(generate_event_sql(id, userid, PLACE_COUNT))
+# 	for id in range(PLACE_COUNT):
+# 		s.append(generate_place_sql(id, userid))
+# 	for id in range(EVENT_COUNT):
+# 		s.append(generate_event_sql(id, userid, PLACE_COUNT))
+
+	for k in OFFSETS:
+		# o = sum(OFFSETS[:k+1].values())
+		o = sum(tuple(OFFSETS.values())[:tuple(OFFSETS.keys().index(k)+1]))
+		c = COUNTS[k]
+		for id in range(o, o+c):
+			s.append(generate_user_sql(id, k)
+	
+	for pid in range(PLACE_COUNT):
+		s.append(generate_place_sql(pid, sum(COUNTS.values())))
+	for eid in range(EVENT_COUNT):
+		s.append(generate_event_sql(eid, sum(COUNTS.values()), PLACE_COUNT))
+		
 
 	f = open(INSERTS_FILENAME, 'w')
 	f.write('USE ' + DATABASE + ';\n')
