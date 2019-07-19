@@ -8,7 +8,7 @@ os:
 
 sudo: true
 
-before_script:
+before_install:
   - pushd Database
   - python3 generate_inserts.py
   - ls -l
