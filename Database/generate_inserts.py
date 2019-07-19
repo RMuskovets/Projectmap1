@@ -76,9 +76,10 @@ def generate_user_sql(id, type, *, first_name=None, last_name=None, email=None, 
 	sql_username   = gen_username(sql_first_name, sql_last_name).lower()
 	sql_email      = email      or gen_email(sql_username).lower()
 	# return f'INSERT INTO USER (id, type, first_name, last_name, email, phone_number, password, birth_date, username) VALUES ({id}, {type}, "{sql_first_name}", "{sql_last_name}", "{sql_email}", "{sql_phone_number}", "{sql_password}", {sql_birth_date}, "{sql_username}")'
-	return 'INSERT INTO USER (ID, TYPE, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, PASSWORD, BIRTH_DATE, USERNAME) VALUES ({}, {}, "{}", "{}", "{}", "{}", "{}", {}, "{}");'.format(
+	return 'INSERT INTO USER (ID, TYPE, STATE, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, PASSWORD, BIRTH_DATE, USERNAME) VALUES ({}, {}, "{}", "{}", "{}", "{}", "{}", {}, "{}");'.format(
 		id,
 		type,
+		1,
 		sql_first_name,
 		sql_last_name,
 		sql_email,
