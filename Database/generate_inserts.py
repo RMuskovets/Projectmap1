@@ -1,6 +1,19 @@
 import sys
 import random
 
+EN_ALPHABET_LEN = 26
+EN_ALPHABET_A_LOWER_POS = 97
+
+def gen_random_number(n):
+    return ''.join([random.choice(range(10)) for _ in range(n)])
+
+def gen_random_word(n, cap=True):
+    s = ''.join([random.choice(list(map(chr, range(EN_ALPHABET_A_LOWER_POS, EN_ALPHABET_A_LOWER_POS+EN_ALPHABET_LEN)))) for _ in range(n)])
+    return s.capitalize() if cap else s
+
+def gen_coord():
+    return random.randint(0, 3600) / 10
+
 ALPHABET = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 			'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
 			'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
@@ -20,20 +33,14 @@ PLACE_COUNT = 50
 
 def gen_first_name():
 	length = random.randint(10, 21)
-	return ''.join([random.choice(list(map(chr, range(97,97+26)))) for _ in range(length)]).capitalize()
+	return gen_random_word(length)
 
 def gen_last_name():
 	length = random.randint(5, 45)
-	return ''.join([random.choice(list(map(chr, range(97,97+26)))) for _ in range(length)]).capitalize()
+	return gen_random_word(length)
 
 def gen_random_domain():
-	s = []
-	for _ in range(random.randint(5, 10)):
-		s.append(random.choice('abcdefghijklmnopqrstuvwxyz'))
-	s.append('.')
-	for _ in range(random.randint(3, 7)):
-		s.append(random.choice('abcdefghijklmnopqrstuvwxyz'))
-	return ''.join(s)
+	return gen_random_word(random.randint(3, 10), cap=False) + '.' + gen_random_word(random.randint(3, 6), cap=False)
 
 def gen_username(fn, ln):
 	fn_part = fn[0]
@@ -52,11 +59,6 @@ def gen_birth_date():
 
 def gen_email(un):
 	return un + '@' + gen_random_domain()
-
-def gen_mark_cx():
-	return random.randint(0, 3600) / 10
-def gen_mark_cy():
-	return random.randint(0, 3600) / 10
 
 DATABASE = 'PROJECTMAP'
 
@@ -91,8 +93,8 @@ def generate_user_sql(id, type, *, first_name=None, last_name=None, email=None, 
 
 def generate_place_sql(id, userid_max, *, name=None, coordx=None, coordy=None, owner_id=None):
 	sql_name = name or gen_first_name()
-	sql_cx   = coordx or gen_mark_cx()
-	sql_cy   = coordy or gen_mark_cy()
+	sql_cx   = coordx or gen_coord()
+	sql_cy   = coordy or gen_coord()
 	sql_oid  = owner_id or random.randint(0, userid_max)
 	# return f'INSERT INTO MARK (id, owner_id, name, coordx, coordy) VALUES ({id}, {sql_oid}, "{sql_name}", {sql_cx}, {sql_cy})'
 	return 'INSERT INTO MARK (id, owner_id, name, coordx, coordy) VALUES ({}, {}, "{}", {}, {})'.format(
@@ -160,7 +162,7 @@ def generate_inserts():
 		s.append(generate_place_sql(pid, sum(COUNTS.values())))
 	for eid in range(EVENT_COUNT):
 		s.append(generate_event_sql(eid, sum(COUNTS.values()), PLACE_COUNT))
-	f = open(INSERTS_FILENAME, 'w')
+	f = open(INSERTS_FILENAME, 'w') if INSERTS_FILENAME != '-' else sys.stdout
 	f.write('USE ' + DATABASE + ';\n')
 	f.write('\n'.join(s))
 	f.close()
