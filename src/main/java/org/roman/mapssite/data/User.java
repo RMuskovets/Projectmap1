@@ -22,8 +22,9 @@ public class User implements DataClass {
     @Column //@JsonIgnore
     private String password; // SHA-256 encrypted
 
-    @Column
-    private Integer type;
+    @OneToOne(cascade=CascadeType.REMOVE)
+    @JoinColumn(name="type", referencedColumnName="id")
+    private Type type;
 
     //region Telemetry data
         @Column

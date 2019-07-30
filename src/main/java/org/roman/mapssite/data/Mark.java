@@ -10,17 +10,18 @@ public class Mark implements DataClass {
 
     @Column(name="ID", nullable=false) @GeneratedValue @Id
     private Integer id;
-    @Column(name="typeID", nullable=false)
-    private Integer type_id = -1;
-    @Column(name="coordX", nullable=false)
+    //@Column(name="typeID", nullable=false)
+    //private Integer type_id = -1;
+    @Column(name="coordx", nullable=false)
     private double coord_x;
-    @Column(name="coordY", nullable=false)
+    @Column(name="coordy", nullable=false)
     private double coord_y;
     @Column
     private String name;
 //    @Column(name="ownerID")
 //    private Integer owner_id = -1;
     @OneToOne(targetEntity = User.class,cascade = CascadeType.REMOVE, optional=false)
+    @JoinColumn(name = "owner_id", referencedColumnName = "id")
     private User owner;
 
     private Mark(Integer type_id, double coord_x, double coord_y, String name,

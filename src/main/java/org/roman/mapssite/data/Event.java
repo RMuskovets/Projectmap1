@@ -20,9 +20,9 @@ public class Event implements DataClass {
     private Integer ID;
     @Column
     private String name;
-    @Column(name="chas_pochatok")
+    @Column(name="start_time")
     private Date start;
-    @Column(name="chas_kinec")
+    @Column(name="end_time")
     private Date end;
     @Column @ManyToMany(targetEntity = User.class, cascade=CascadeType.REMOVE)
     private List<User> zaprosheni;

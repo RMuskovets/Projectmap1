@@ -27,3 +27,4 @@ errors
 #Database/*
 gconfig.sh
 src/main/js/node_modules/*
+Database/INSERTS.SQL

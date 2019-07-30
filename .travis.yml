@@ -1,0 +1,24 @@
+language: java
+
+jdk:
+  - openjdk8
+
+os:
+  - linux
+
+sudo: true
+
+before_install:
+  - pushd Database
+  - python3 generate_inserts.py
+  - ls -l
+  - mysql -uroot < CREATE-DATABASE.SQL
+  - mysql -uroot < INSERTS.SQL || cat INSERTS.SQL | head -n 20 && false
+  - popd >/dev/null
+
+script:
+  - mvn spring-boot:run
+  - mvn clean install spring-boot:repackage
+
+services:
+  - mysql
